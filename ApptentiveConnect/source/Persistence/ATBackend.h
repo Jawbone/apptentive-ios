@@ -18,7 +18,7 @@
 #import "ATPersonUpdater.h"
 #import "ATFileAttachment.h"
 #if TARGET_OS_IPHONE
-#import "ATMessage.h"
+#import "ATCompoundMessage.h"
 #import "ATFeedbackTypes.h"
 #endif
 
@@ -34,26 +34,27 @@ extern NSString *const ATBackendBecameReadyNotification;
 @class ATAPIRequest;
 @class ATMessageTask;
 
-@protocol  ATBackendMessageDelegate;
+@protocol ATBackendMessageDelegate;
 
 /*! Handles all of the backend activities, such as sending feedback. */
 @interface ATBackend : NSObject <ATConversationUpdaterDelegate, ATDeviceUpdaterDelegate, ATPersonUpdaterDelegate
 #if TARGET_OS_IPHONE
-, NSFetchedResultsControllerDelegate, UIAlertViewDelegate
+						   ,
+						   NSFetchedResultsControllerDelegate, UIAlertViewDelegate
 #endif
->
-@property (nonatomic, copy) NSString *apiKey;
+						   >
+@property (copy, nonatomic) NSString *apiKey;
 /*! The feedback currently being worked on by the user. */
-@property (nonatomic, strong) ATFeedback *currentFeedback;
-@property (nonatomic, strong) NSDictionary *currentCustomData;
-@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, strong, readonly) NSString *supportDirectoryPath;
-@property (nonatomic, strong) UIViewController *presentedMessageCenterViewController;
+@property (strong, nonatomic) ATFeedback *currentFeedback;
+@property (strong, nonatomic) NSDictionary *currentCustomData;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSString *supportDirectoryPath;
+@property (strong, nonatomic) UIViewController *presentedMessageCenterViewController;
 
-@property (nonatomic, assign, readonly) BOOL hideBranding;
-@property (nonatomic, assign, readonly) BOOL notificationPopupsEnabled;
+@property (readonly, assign, nonatomic) BOOL hideBranding;
+@property (readonly, assign, nonatomic) BOOL notificationPopupsEnabled;
 
 /*! Message send progress. */
 @property (weak, nonatomic) id<ATBackendMessageDelegate> messageDelegate;
@@ -69,21 +70,21 @@ extern NSString *const ATBackendBecameReadyNotification;
 - (BOOL)presentMessageCenterFromViewController:(UIViewController *)viewController withCustomData:(NSDictionary *)customData;
 - (void)messageCenterWillDismiss:(ATMessageCenterViewController *)messageCenter;
 
-- (void)attachCustomDataToMessage:(ATMessage *)message;
+- (void)attachCustomDataToMessage:(ATCompoundMessage *)message;
 - (void)dismissMessageCenterAnimated:(BOOL)animated completion:(void (^)(void))completion;
 #elif TARGET_OS_MAC
 + (NSImage *)imageNamed:(NSString *)name;
 #endif
 
 /*! ATAutomatedMessage messages. */
-- (ATMessage *)automatedMessageWithTitle:(NSString *)title body:(NSString *)body;
-- (BOOL)sendAutomatedMessage:(ATMessage *)message;
+- (ATCompoundMessage *)automatedMessageWithTitle:(NSString *)title body:(NSString *)body;
+- (BOOL)sendAutomatedMessage:(ATCompoundMessage *)message;
 
 /*! Send ATTextMessage messages. */
-- (ATMessage *)createTextMessageWithBody:(NSString *)body hiddenOnClient:(BOOL)hidden;
+- (ATCompoundMessage *)createTextMessageWithBody:(NSString *)body hiddenOnClient:(BOOL)hidden;
 - (BOOL)sendTextMessageWithBody:(NSString *)body;
 - (BOOL)sendTextMessageWithBody:(NSString *)body hiddenOnClient:(BOOL)hidden;
-- (BOOL)sendTextMessage:(ATMessage *)message;
+- (BOOL)sendTextMessage:(ATCompoundMessage *)message;
 /*! Send ATFileMessage messages. */
 - (BOOL)sendImageMessageWithImage:(UIImage *)image;
 - (BOOL)sendImageMessageWithImage:(UIImage *)image hiddenOnClient:(BOOL)hidden;

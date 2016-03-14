@@ -9,31 +9,33 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class ATMessage;
+@class ATCompoundMessage;
+
 
 @interface ATMessageSender : NSManagedObject
 
-@property (nonatomic, strong) NSString *apptentiveID;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *emailAddress;
-@property (nonatomic, strong) NSString *profilePhotoURL;
-@property (nonatomic, strong) NSSet *sentMessages;
-@property (nonatomic, strong) NSSet *receivedMessages;
+@property (strong, nonatomic) NSString *apptentiveID;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *emailAddress;
+@property (strong, nonatomic) NSString *profilePhotoURL;
+@property (strong, nonatomic) NSSet *sentMessages;
+@property (strong, nonatomic) NSSet *receivedMessages;
 
 + (ATMessageSender *)findSenderWithID:(NSString *)apptentiveID;
 + (ATMessageSender *)newOrExistingMessageSenderFromJSON:(NSDictionary *)json;
 - (NSDictionary *)apiJSON;
 @end
 
+
 @interface ATMessageSender (CoreDataGeneratedAccessors)
 
-- (void)addSentMessagesObject:(ATMessage *)value;
-- (void)removeSentMessagesObject:(ATMessage *)value;
+- (void)addSentMessagesObject:(ATCompoundMessage *)value;
+- (void)removeSentMessagesObject:(ATCompoundMessage *)value;
 - (void)addSentMessages:(NSSet *)values;
 - (void)removeSentMessages:(NSSet *)values;
 
-- (void)addReceivedMessagesObject:(ATMessage *)value;
-- (void)removeReceivedMessagesObject:(ATMessage *)value;
+- (void)addReceivedMessagesObject:(ATCompoundMessage *)value;
+- (void)removeReceivedMessagesObject:(ATCompoundMessage *)value;
 - (void)addReceivedMessages:(NSSet *)values;
 - (void)removeReceivedMessages:(NSSet *)values;
 

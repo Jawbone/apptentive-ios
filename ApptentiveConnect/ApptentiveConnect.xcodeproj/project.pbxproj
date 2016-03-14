@@ -28,6 +28,14 @@
 		013BB6181BF6ABB600BB6C27 /* ATDataModel v4 to v5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 013BB6121BF6A82300BB6C27 /* ATDataModel v4 to v5.xcmappingmodel */; };
 		013C1A7B1B713D5C002434B8 /* ATMessageCenterErrorViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 013C1A791B713D5C002434B8 /* ATMessageCenterErrorViewController.h */; };
 		013C1A7C1B713D5C002434B8 /* ATMessageCenterErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C1A7A1B713D5C002434B8 /* ATMessageCenterErrorViewController.m */; };
+		01413E661C8A4539008D34B5 /* ATHUDViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 01413E621C8A4539008D34B5 /* ATHUDViewController.h */; };
+		01413E671C8A4539008D34B5 /* ATHUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01413E631C8A4539008D34B5 /* ATHUDViewController.m */; };
+		01413E681C8A4539008D34B5 /* ATPassThroughWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 01413E641C8A4539008D34B5 /* ATPassThroughWindow.h */; };
+		01413E691C8A4539008D34B5 /* ATPassThroughWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 01413E651C8A4539008D34B5 /* ATPassThroughWindow.m */; };
+		01413E6E1C8A45B3008D34B5 /* at_thanks.png in Resources */ = {isa = PBXBuildFile; fileRef = 01413E6B1C8A45B3008D34B5 /* at_thanks.png */; };
+		01413E6F1C8A45B3008D34B5 /* at_thanks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01413E6C1C8A45B3008D34B5 /* at_thanks@2x.png */; };
+		01413E701C8A45B3008D34B5 /* at_thanks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01413E6D1C8A45B3008D34B5 /* at_thanks@3x.png */; };
+		01413E721C8A52E1008D34B5 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01413E711C8A52E1008D34B5 /* QuickLook.framework */; };
 		0160854D1BA77B1D00050FDB /* at_account.png in Resources */ = {isa = PBXBuildFile; fileRef = 0160852A1BA77B0500050FDB /* at_account.png */; };
 		0160854E1BA77B1D00050FDB /* at_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0160852B1BA77B0500050FDB /* at_account@2x.png */; };
 		0160854F1BA77B1D00050FDB /* at_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0160852C1BA77B0500050FDB /* at_account@3x.png */; };
@@ -80,8 +88,8 @@
 		01C30CEC1B0D09F8006BC911 /* ATMessageCenterGreetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C30CEA1B0D09F8006BC911 /* ATMessageCenterGreetingView.m */; };
 		01C7C4DD1BEAD0BC005D6EC1 /* ATDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C7C4D51BEAD0A4005D6EC1 /* ATDataModel.xcdatamodeld */; };
 		01C7C4DE1BEAD0BE005D6EC1 /* ATDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C7C4D51BEAD0A4005D6EC1 /* ATDataModel.xcdatamodeld */; };
-		01C7C4E31BEAD105005D6EC1 /* ATMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C7C4E11BEAD105005D6EC1 /* ATMessage.h */; };
-		01C7C4E41BEAD105005D6EC1 /* ATMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7C4E21BEAD105005D6EC1 /* ATMessage.m */; };
+		01C7C4E31BEAD105005D6EC1 /* ATCompoundMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C7C4E11BEAD105005D6EC1 /* ATCompoundMessage.h */; };
+		01C7C4E41BEAD105005D6EC1 /* ATCompoundMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7C4E21BEAD105005D6EC1 /* ATCompoundMessage.m */; };
 		01CC8BCA1B1D0598006C4D30 /* ATNetworkImageIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 01CC8BC81B1D0598006C4D30 /* ATNetworkImageIconView.h */; };
 		01CC8BCB1B1D0598006C4D30 /* ATNetworkImageIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC8BC91B1D0598006C4D30 /* ATNetworkImageIconView.m */; };
 		01D0C38C1BF3DC330024BA1A /* ATAttachmentController.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D0C38A1BF3DC330024BA1A /* ATAttachmentController.h */; };
@@ -134,8 +142,6 @@
 		49352ADD138CA1DC000E464A /* ATURLConnection_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 49352ADC138CA1DC000E464A /* ATURLConnection_Private.h */; };
 		4936AE531379DE3100A4B17F /* ATDefaultTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4936AE471379DE3100A4B17F /* ATDefaultTextView.h */; };
 		4936AE541379DE3100A4B17F /* ATDefaultTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4936AE481379DE3100A4B17F /* ATDefaultTextView.m */; };
-		4936AE551379DE3100A4B17F /* ATHUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4936AE491379DE3100A4B17F /* ATHUDView.h */; };
-		4936AE561379DE3100A4B17F /* ATHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4936AE4A1379DE3100A4B17F /* ATHUDView.m */; };
 		4936AE771379DEBB00A4B17F /* ATUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4936AE751379DEBB00A4B17F /* ATUtilities.h */; };
 		4936AE781379DEBB00A4B17F /* ATUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4936AE761379DEBB00A4B17F /* ATUtilities.m */; };
 		4936AE831379DECE00A4B17F /* ATBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 4936AE7B1379DECE00A4B17F /* ATBackend.h */; };
@@ -340,6 +346,14 @@
 		013BB6121BF6A82300BB6C27 /* ATDataModel v4 to v5.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "ATDataModel v4 to v5.xcmappingmodel"; sourceTree = "<group>"; };
 		013C1A791B713D5C002434B8 /* ATMessageCenterErrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMessageCenterErrorViewController.h; sourceTree = "<group>"; };
 		013C1A7A1B713D5C002434B8 /* ATMessageCenterErrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMessageCenterErrorViewController.m; sourceTree = "<group>"; };
+		01413E621C8A4539008D34B5 /* ATHUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHUDViewController.h; sourceTree = "<group>"; };
+		01413E631C8A4539008D34B5 /* ATHUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHUDViewController.m; sourceTree = "<group>"; };
+		01413E641C8A4539008D34B5 /* ATPassThroughWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPassThroughWindow.h; sourceTree = "<group>"; };
+		01413E651C8A4539008D34B5 /* ATPassThroughWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPassThroughWindow.m; sourceTree = "<group>"; };
+		01413E6B1C8A45B3008D34B5 /* at_thanks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_thanks.png; sourceTree = "<group>"; };
+		01413E6C1C8A45B3008D34B5 /* at_thanks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "at_thanks@2x.png"; sourceTree = "<group>"; };
+		01413E6D1C8A45B3008D34B5 /* at_thanks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "at_thanks@3x.png"; sourceTree = "<group>"; };
+		01413E711C8A52E1008D34B5 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		01438FBA1B8E65000016B079 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		0160852A1BA77B0500050FDB /* at_account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = at_account.png; sourceTree = "<group>"; };
 		0160852B1BA77B0500050FDB /* at_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "at_account@2x.png"; sourceTree = "<group>"; };
@@ -401,8 +415,8 @@
 		01C7C4D81BEAD0A4005D6EC1 /* ATDataModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ATDataModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		01C7C4D91BEAD0A4005D6EC1 /* ATDataModel 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ATDataModel 5.xcdatamodel"; sourceTree = "<group>"; };
 		01C7C4DA1BEAD0A4005D6EC1 /* ATDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ATDataModel.xcdatamodel; sourceTree = "<group>"; };
-		01C7C4E11BEAD105005D6EC1 /* ATMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMessage.h; sourceTree = "<group>"; };
-		01C7C4E21BEAD105005D6EC1 /* ATMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMessage.m; sourceTree = "<group>"; };
+		01C7C4E11BEAD105005D6EC1 /* ATCompoundMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCompoundMessage.h; sourceTree = "<group>"; };
+		01C7C4E21BEAD105005D6EC1 /* ATCompoundMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCompoundMessage.m; sourceTree = "<group>"; };
 		01CC8BC81B1D0598006C4D30 /* ATNetworkImageIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNetworkImageIconView.h; sourceTree = "<group>"; };
 		01CC8BC91B1D0598006C4D30 /* ATNetworkImageIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNetworkImageIconView.m; sourceTree = "<group>"; };
 		01D0C38A1BF3DC330024BA1A /* ATAttachmentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAttachmentController.h; sourceTree = "<group>"; };
@@ -436,7 +450,6 @@
 		01F6FDBF1BFD3C1D004513C2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		01F6FDC51BFD41F1004513C2 /* Apptentive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Apptentive.storyboard; sourceTree = "<group>"; };
 		01F6FE2B1C0118F3004513C2 /* testWhitespaceTrimming.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testWhitespaceTrimming.json; sourceTree = "<group>"; };
-		49129ED2174068720026C2E1 /* ApptentiveMigrationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ApptentiveMigrationTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		49129ED3174068730026C2E1 /* ApptentiveMigrationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ApptentiveMigrationTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		491748B21341177000A7D11E /* ATConnectionChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATConnectionChannel.h; sourceTree = "<group>"; };
 		491748B31341177000A7D11E /* ATConnectionChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATConnectionChannel.m; sourceTree = "<group>"; };
@@ -458,8 +471,6 @@
 		49358DBB1BF3336700516F1E /* ATInteractionInvocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInteractionInvocationTests.m; sourceTree = "<group>"; };
 		4936AE471379DE3100A4B17F /* ATDefaultTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDefaultTextView.h; sourceTree = "<group>"; };
 		4936AE481379DE3100A4B17F /* ATDefaultTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDefaultTextView.m; sourceTree = "<group>"; };
-		4936AE491379DE3100A4B17F /* ATHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHUDView.h; sourceTree = "<group>"; };
-		4936AE4A1379DE3100A4B17F /* ATHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHUDView.m; sourceTree = "<group>"; };
 		4936AE751379DEBB00A4B17F /* ATUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATUtilities.h; sourceTree = "<group>"; };
 		4936AE761379DEBB00A4B17F /* ATUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATUtilities.m; sourceTree = "<group>"; };
 		4936AE7B1379DECE00A4B17F /* ATBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBackend.h; sourceTree = "<group>"; };
@@ -474,12 +485,10 @@
 		493AEB2615990A4D00DFD4C7 /* ATWebClient+SurveyAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATWebClient+SurveyAdditions.m"; sourceTree = "<group>"; };
 		493AEB2815990A4D00DFD4C7 /* ATSurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSurveyViewController.h; sourceTree = "<group>"; };
 		493AEB2915990A4D00DFD4C7 /* ATSurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSurveyViewController.m; sourceTree = "<group>"; };
-		493AEB4315990A6B00DFD4C7 /* ApptentiveSurveysTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ApptentiveSurveysTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		493AEB4415990A6B00DFD4C7 /* ApptentiveSurveysTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ApptentiveSurveysTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		49509A5F135658E200793EEC /* ATReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATReachability.h; sourceTree = "<group>"; };
 		49509A60135658E200793EEC /* ATReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATReachability.m; sourceTree = "<group>"; };
 		49509A6B1356596F00793EEC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		49509DF913583FB800793EEC /* ATUtilitiesTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ATUtilitiesTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		49509DFA13583FB800793EEC /* ATUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ATUtilitiesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		495E9C1A16EABD8E00AE3B03 /* ATLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLogger.h; sourceTree = "<group>"; };
 		495E9C1B16EABD8E00AE3B03 /* ATLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLogger.m; sourceTree = "<group>"; };
@@ -511,7 +520,6 @@
 		4987FA98157AE53600AF2078 /* ATMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMetric.m; sourceTree = "<group>"; };
 		4987FA9A157AE53700AF2078 /* ATWebClient+Metrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ATWebClient+Metrics.h"; sourceTree = "<group>"; };
 		4987FA9B157AE53700AF2078 /* ATWebClient+Metrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ATWebClient+Metrics.m"; sourceTree = "<group>"; };
-		4987FAA5157AE59D00AF2078 /* ApptentiveMetricsTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ApptentiveMetricsTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4987FAA6157AE59D00AF2078 /* ApptentiveMetricsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApptentiveMetricsTests.m; sourceTree = "<group>"; };
 		4988FB5316212BD4000A7CB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		498EFB6E15BA48B200A1043B /* ATAppConfigurationUpdateTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAppConfigurationUpdateTask.h; sourceTree = "<group>"; };
@@ -538,7 +546,6 @@
 		49B877101464958C00594A5D /* ATWebClient_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATWebClient_Private.h; sourceTree = "<group>"; };
 		49C002871334137E0071F088 /* ApptentiveConnectTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ApptentiveConnectTests-Info.plist"; sourceTree = "<group>"; };
 		49C002881334137E0071F088 /* ApptentiveConnectTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApptentiveConnectTests-Prefix.pch"; sourceTree = "<group>"; };
-		49C002891334137E0071F088 /* ApptentiveConnectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ApptentiveConnectTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		49C0028A1334137E0071F088 /* ApptentiveConnectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ApptentiveConnectTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		49C00296133413BB0071F088 /* ApptentiveConnect-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ApptentiveConnect-Prefix.pch"; sourceTree = "<group>"; };
 		49C00297133413BB0071F088 /* ATConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATConnect.h; sourceTree = "<group>"; };
@@ -593,7 +600,6 @@
 		49F8AFFE16CC56570070FFEA /* ATEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATEvent.m; sourceTree = "<group>"; };
 		49FD7AF219089F1500A707C2 /* ATConnect_Debugging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATConnect_Debugging.h; sourceTree = "<group>"; };
 		49FECBE217D02BAD00069502 /* ATDataModel v1 to v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "ATDataModel v1 to v2.xcmappingmodel"; sourceTree = "<group>"; };
-		580B24B917D90AF300AE2CD0 /* ATEngagementTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ATEngagementTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		580B24BA17D90AF300AE2CD0 /* ATEngagementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ATEngagementTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		583C27091B34BFD800525001 /* ATUnreadMessagesBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATUnreadMessagesBadgeView.h; sourceTree = "<group>"; };
 		583C270A1B34BFD800525001 /* ATUnreadMessagesBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATUnreadMessagesBadgeView.m; sourceTree = "<group>"; };
@@ -693,6 +699,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01413E721C8A52E1008D34B5 /* QuickLook.framework in Frameworks */,
 				01F6FDC01BFD3C1D004513C2 /* MobileCoreServices.framework in Frameworks */,
 				01F6FDBE1BFD3C14004513C2 /* AVFoundation.framework in Frameworks */,
 				01F6FDBC1BFD3C0D004513C2 /* ImageIO.framework in Frameworks */,
@@ -740,6 +747,16 @@
 				013BB6051BF6A63300BB6C27 /* at_remove@3x.png */,
 			);
 			path = at_remove;
+			sourceTree = "<group>";
+		};
+		01413E6A1C8A45B3008D34B5 /* at_thanks */ = {
+			isa = PBXGroup;
+			children = (
+				01413E6B1C8A45B3008D34B5 /* at_thanks.png */,
+				01413E6C1C8A45B3008D34B5 /* at_thanks@2x.png */,
+				01413E6D1C8A45B3008D34B5 /* at_thanks@3x.png */,
+			);
+			path = at_thanks;
 			sourceTree = "<group>";
 		};
 		0159B64A1B7A73D100CC45E6 /* Views */ = {
@@ -796,6 +813,7 @@
 		016085281BA77B0500050FDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				01413E6A1C8A45B3008D34B5 /* at_thanks */,
 				013BB6021BF6A63300BB6C27 /* at_remove */,
 				01D0C39A1BF3EE9B0024BA1A /* at_attach */,
 				0127EA141BF136020005481A /* at_document */,
@@ -1109,6 +1127,7 @@
 		496DC3811333D35600743F65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01413E711C8A52E1008D34B5 /* QuickLook.framework */,
 				01F6FDBF1BFD3C1D004513C2 /* MobileCoreServices.framework */,
 				01F6FDBD1BFD3C14004513C2 /* AVFoundation.framework */,
 				01F6FDBB1BFD3C0D004513C2 /* ImageIO.framework */,
@@ -1196,12 +1215,14 @@
 		49B3D964133D843D00B5A5CD /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				01413E621C8A4539008D34B5 /* ATHUDViewController.h */,
+				01413E631C8A4539008D34B5 /* ATHUDViewController.m */,
+				01413E641C8A4539008D34B5 /* ATPassThroughWindow.h */,
+				01413E651C8A4539008D34B5 /* ATPassThroughWindow.m */,
 				01CC8BC81B1D0598006C4D30 /* ATNetworkImageIconView.h */,
 				01CC8BC91B1D0598006C4D30 /* ATNetworkImageIconView.m */,
 				4936AE471379DE3100A4B17F /* ATDefaultTextView.h */,
 				4936AE481379DE3100A4B17F /* ATDefaultTextView.m */,
-				4936AE491379DE3100A4B17F /* ATHUDView.h */,
-				4936AE4A1379DE3100A4B17F /* ATHUDView.m */,
 				4960A531171F70530082669B /* ATNetworkImageView.h */,
 				4960A532171F70530082669B /* ATNetworkImageView.m */,
 				583C27091B34BFD800525001 /* ATUnreadMessagesBadgeView.h */,
@@ -1216,25 +1237,19 @@
 				49ED18141BF988C300C6D343 /* OCMock */,
 				49C54BD61790B783009CCD5D /* data */,
 				49C002871334137E0071F088 /* ApptentiveConnectTests-Info.plist */,
-				01F6FD8F1BFAA512004513C2 /* CriteriaTests.m */,
-				01F6FD911BFAA52A004513C2 /* CriteriaTests.h */,
-				011B08D51C0D19AF004F4F5D /* CodePointAndInteractionTests.m */,
 				49C002881334137E0071F088 /* ApptentiveConnectTests-Prefix.pch */,
-				49C002891334137E0071F088 /* ApptentiveConnectTests.h */,
 				49C0028A1334137E0071F088 /* ApptentiveConnectTests.m */,
 				49C0028B1334137E0071F088 /* InfoPlist.strings */,
-				49509DF913583FB800793EEC /* ATUtilitiesTests.h */,
-				49509DFA13583FB800793EEC /* ATUtilitiesTests.m */,
-				4987FAA5157AE59D00AF2078 /* ApptentiveMetricsTests.h */,
 				4987FAA6157AE59D00AF2078 /* ApptentiveMetricsTests.m */,
-				493AEB4315990A6B00DFD4C7 /* ApptentiveSurveysTests.h */,
 				493AEB4415990A6B00DFD4C7 /* ApptentiveSurveysTests.m */,
-				49129ED2174068720026C2E1 /* ApptentiveMigrationTests.h */,
 				49129ED3174068730026C2E1 /* ApptentiveMigrationTests.m */,
-				580B24B917D90AF300AE2CD0 /* ATEngagementTests.h */,
 				580B24BA17D90AF300AE2CD0 /* ATEngagementTests.m */,
 				49358DBB1BF3336700516F1E /* ATInteractionInvocationTests.m */,
 				49ED18041BF97B4500C6D343 /* ATInteractionUsageDataTests.m */,
+				49509DFA13583FB800793EEC /* ATUtilitiesTests.m */,
+				011B08D51C0D19AF004F4F5D /* CodePointAndInteractionTests.m */,
+				01F6FD8F1BFAA512004513C2 /* CriteriaTests.m */,
+				01F6FD911BFAA52A004513C2 /* CriteriaTests.h */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -1354,8 +1369,8 @@
 				492B81D916D595A00031BEF6 /* ATFileAttachment.m */,
 				49F8AFDB16CC4A550070FFEA /* ATMessageSender.h */,
 				49F8AFDC16CC4A550070FFEA /* ATMessageSender.m */,
-				01C7C4E11BEAD105005D6EC1 /* ATMessage.h */,
-				01C7C4E21BEAD105005D6EC1 /* ATMessage.m */,
+				01C7C4E11BEAD105005D6EC1 /* ATCompoundMessage.h */,
+				01C7C4E21BEAD105005D6EC1 /* ATCompoundMessage.m */,
 				49F8AFDD16CC4A550070FFEA /* ATPersonInfo.h */,
 				49F8AFDE16CC4A550070FFEA /* ATPersonInfo.m */,
 				49F8AFF916CC4D860070FFEA /* ATRecord.h */,
@@ -1486,7 +1501,7 @@
 				01AE42071B38E38D006B9191 /* ATBannerViewController.h in Headers */,
 				49C002A1133413BB0071F088 /* ApptentiveConnect-Prefix.pch in Headers */,
 				49C002A2133413BB0071F088 /* ATConnect.h in Headers */,
-				01C7C4E31BEAD105005D6EC1 /* ATMessage.h in Headers */,
+				01C7C4E31BEAD105005D6EC1 /* ATCompoundMessage.h in Headers */,
 				49D1124F13368CC200603373 /* ATTask.h in Headers */,
 				49D112731337CC9F00603373 /* ATTaskQueue.h in Headers */,
 				491748BA1341177000A7D11E /* ATConnectionChannel.h in Headers */,
@@ -1501,7 +1516,6 @@
 				588F664A1B601F0B00F388E3 /* ATMessageCenterContextMessageCell.h in Headers */,
 				4936AE531379DE3100A4B17F /* ATDefaultTextView.h in Headers */,
 				01C30CEB1B0D09F8006BC911 /* ATMessageCenterGreetingView.h in Headers */,
-				4936AE551379DE3100A4B17F /* ATHUDView.h in Headers */,
 				49735D621832DF1F00D48DE7 /* ATMessageCenterDataSource.h in Headers */,
 				4936AE771379DEBB00A4B17F /* ATUtilities.h in Headers */,
 				4936AE831379DECE00A4B17F /* ATBackend.h in Headers */,
@@ -1547,7 +1561,9 @@
 				58D17D4F18C5676F00D123BC /* ATInteractionMessageCenterController.h in Headers */,
 				583DF0671A390DDA00BF0207 /* ATInteractionInvocation.h in Headers */,
 				58E9580A190740BC005063DC /* ATSurveyQuestionResponse.h in Headers */,
+				01413E661C8A4539008D34B5 /* ATHUDViewController.h in Headers */,
 				0171DFED1BF2D019006F8BEA /* ATCompoundReplyCell.h in Headers */,
+				01413E681C8A4539008D34B5 /* ATPassThroughWindow.h in Headers */,
 				0127EA121BF1271C0005481A /* ATIndexedCollectionView.h in Headers */,
 				49F8AFF016CC4A550070FFEA /* ATMessageSender.h in Headers */,
 				49F8AFF216CC4A550070FFEA /* ATPersonInfo.h in Headers */,
@@ -1750,6 +1766,7 @@
 				016085611BA77B1D00050FDB /* at_network_error@3x.png in Resources */,
 				016085541BA77B1D00050FDB /* at_checkmark@2x.png in Resources */,
 				0160855D1BA77B1D00050FDB /* at_info@2x.png in Resources */,
+				01413E6F1C8A45B3008D34B5 /* at_thanks@2x.png in Resources */,
 				016085581BA77B1D00050FDB /* at_close@3x.png in Resources */,
 				016085621BA77B1D00050FDB /* at_update_icon_mask.png in Resources */,
 				0127EA181BF136090005481A /* at_document.png in Resources */,
@@ -1762,8 +1779,10 @@
 				013BB6061BF6A65C00BB6C27 /* at_remove.png in Resources */,
 				016085551BA77B1D00050FDB /* at_checkmark@3x.png in Resources */,
 				0160855C1BA77B1D00050FDB /* at_info.png in Resources */,
+				01413E6E1C8A45B3008D34B5 /* at_thanks.png in Resources */,
 				0160854D1BA77B1D00050FDB /* at_account.png in Resources */,
 				016085661BA77B1D00050FDB /* at_update_logo@2x.png in Resources */,
+				01413E701C8A45B3008D34B5 /* at_thanks@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1791,6 +1810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01413E691C8A4539008D34B5 /* ATPassThroughWindow.m in Sources */,
 				01D3128F1B69349900B369E1 /* ATProgressNavigationBar.m in Sources */,
 				49C002A3133413BB0071F088 /* ATConnect.m in Sources */,
 				49D1125013368CC200603373 /* ATTask.m in Sources */,
@@ -1808,7 +1828,6 @@
 				49509A62135658E200793EEC /* ATReachability.m in Sources */,
 				0171DFEE1BF2D019006F8BEA /* ATCompoundReplyCell.m in Sources */,
 				4936AE541379DE3100A4B17F /* ATDefaultTextView.m in Sources */,
-				4936AE561379DE3100A4B17F /* ATHUDView.m in Sources */,
 				01BD9E051B55E465004F12AB /* ATMessageCenterInputView.m in Sources */,
 				0127EA111BF1271C0005481A /* ATCompoundMessageCell.m in Sources */,
 				4936AE781379DEBB00A4B17F /* ATUtilities.m in Sources */,
@@ -1829,6 +1848,7 @@
 				01AE42081B38E38D006B9191 /* ATBannerViewController.m in Sources */,
 				493AEB2E15990A4D00DFD4C7 /* ATSurvey.m in Sources */,
 				0127EA0F1BF1271C0005481A /* ATAttachmentCell.m in Sources */,
+				01413E671C8A4539008D34B5 /* ATHUDViewController.m in Sources */,
 				493AEB3115990A4D00DFD4C7 /* ATSurveyParser.m in Sources */,
 				493AEB3415990A4D00DFD4C7 /* ATSurveyQuestion.m in Sources */,
 				493AEB3D15990A4D00DFD4C7 /* ATWebClient+SurveyAdditions.m in Sources */,
@@ -1859,7 +1879,7 @@
 				017D974B1B0E57C2004E045C /* ATMessageCenterReplyCell.m in Sources */,
 				495E9C1D16EABD8E00AE3B03 /* ATLogger.m in Sources */,
 				583C270C1B34BFD800525001 /* ATUnreadMessagesBadgeView.m in Sources */,
-				01C7C4E41BEAD105005D6EC1 /* ATMessage.m in Sources */,
+				01C7C4E41BEAD105005D6EC1 /* ATCompoundMessage.m in Sources */,
 				58AB416818F608500034FAA5 /* ATInteractionSurveyController.m in Sources */,
 				492F2F1D16ED597F0030E48A /* ATRecordRequestTask.m in Sources */,
 				4960A534171F70530082669B /* ATNetworkImageView.m in Sources */,
@@ -2064,7 +2084,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				DSTROOT = /tmp/ApptentiveConnect.dst;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2094,7 +2113,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				DSTROOT = /tmp/ApptentiveConnect.dst;
 				ENABLE_NS_ASSERTIONS = NO;

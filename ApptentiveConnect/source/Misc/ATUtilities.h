@@ -14,22 +14,10 @@
 
 #define kApptentiveHostName @"apptentive.com"
 
+
 @interface ATUtilities : NSObject
 #if TARGET_OS_IPHONE
-+ (UIImage *)imageByTakingScreenshot;
-+ (UIImage *)imageByTakingScreenshotExcludingWindow:(UIWindow *)excludedWindow;
-+ (UIImage *)imageByTakingScreenshotIncludingBlankStatusBarArea:(BOOL)includeStatusBar excludingWindow:(UIWindow *)window;
-
-+ (UIImage *)imageByRotatingImage:(UIImage *)image toInterfaceOrientation:(UIInterfaceOrientation)orientation;
-+ (UIImage *)imageByRotatingImage:(UIImage *)image byRadians:(CGFloat)radians;
-+ (UIImage *)imageByScalingImage:(UIImage *)image toFitSize:(CGSize)size scale:(CGFloat)contentScale;
-+ (UIImage *)imageByScalingImage:(UIImage *)image toSize:(CGSize)size scale:(CGFloat)contentScale fromITouchCamera:(BOOL)isFromITouchCamera;
-+ (CGFloat)rotationOfViewHierarchyInRadians:(UIView *)leafView;
-+ (CGAffineTransform)viewTransformInWindow:(UIWindow *)window;
-
 + (UIViewController *)rootViewControllerForCurrentWindow;
-
-+ (UIColor *)contrastingTextColorForBackgroundColor:(UIColor *)backgroundColor;
 
 #elif TARGET_OS_MAC
 + (NSData *)pngRepresentationOfImage:(NSImage *)image;
@@ -67,7 +55,7 @@
 + (BOOL)dictionary:(NSDictionary *)a isEqualToDictionary:(NSDictionary *)b;
 + (NSTimeInterval)maxAgeFromCacheControlHeader:(NSString *)cacheControl;
 + (BOOL)array:(NSArray *)a isEqualToArray:(NSArray *)b;
-+ (NSDictionary *)diffDictionary:(NSDictionary *)new againstDictionary:(NSDictionary *)old;
++ (NSDictionary *)diffDictionary:(NSDictionary *) new againstDictionary:(NSDictionary *)old;
 
 #if TARGET_OS_IPHONE
 + (UIEdgeInsets)edgeInsetsOfView:(UIView *)view;

@@ -19,6 +19,7 @@
 
 static ATTaskQueue *sharedTaskQueue = nil;
 
+
 @interface ATTaskQueue (Private)
 - (void)setup;
 - (void)teardown;
@@ -26,7 +27,8 @@ static ATTaskQueue *sharedTaskQueue = nil;
 - (void)unsetActiveTask;
 @end
 
-@implementation ATTaskQueue  {
+
+@implementation ATTaskQueue {
 	ATTask *activeTask;
 	NSMutableArray *tasks;
 }
@@ -188,7 +190,7 @@ static ATTaskQueue *sharedTaskQueue = nil;
 			if (activeTask) {
 				return;
 			}
-			
+
 			if ([tasks count]) {
 				for (ATTask *task in tasks) {
 					if ([task canStart]) {
@@ -245,13 +247,13 @@ static ATTaskQueue *sharedTaskQueue = nil;
 			[task cleanup];
 			[tasks removeObject:object];
 			[self archive];
-			[self start];
+			[self startOnNextRunLoopIteration];
 		} else if ([keyPath isEqualToString:@"failed"] && [task failed]) {
 			if (task.isFailureOkay) {
 				task.failureCount = task.failureCount + 1;
 				[self unsetActiveTask];
 				[tasks removeObject:task];
-				[self start];
+				[self startOnNextRunLoopIteration];
 			} else {
 				[self stop];
 				task.failureCount = task.failureCount + 1;
@@ -260,20 +262,28 @@ static ATTaskQueue *sharedTaskQueue = nil;
 					[self unsetActiveTask];
 					[task cleanup];
 					[tasks removeObject:task];
-					[self start];
+					[self startOnNextRunLoopIteration];
 				} else {
 					// Put task on back of queue.
 					[tasks removeObject:task];
 					[tasks addObject:task];
 					[self archive];
-					
+
 					[self performSelector:@selector(start) withObject:nil afterDelay:kATTaskQueueRetryPeriod];
 				}
 			}
 		}
 	}
 }
+
+- (void)startOnNextRunLoopIteration {
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self start];
+	});
+}
+
 @end
+
 
 @implementation ATTaskQueue (Private)
 - (void)setup {
